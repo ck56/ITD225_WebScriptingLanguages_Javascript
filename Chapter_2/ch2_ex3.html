@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // Pythagorean Theorem -- a2 + b2 = c2
+
+        console.log("Let's find the hypotenuse!")
+       let sideA = prompt("What is the length of side 'a'?");
+       let sideB = prompt("What is the length of side 'b'?");
+
+        console.log(`The length of side A = ${sideA}`);
+        console.log(`The lenght of side B = ${sideB}`);
+
+       function pySolution(sideA, sideB) {
+        return Math.sqrt((sideA ** 2) + (sideB ** 2));
+       }
+
+       console.log(`The length of side 'c' is ${pySolution(sideA, sideB)}.`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

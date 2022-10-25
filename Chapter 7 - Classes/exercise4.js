@@ -26,7 +26,7 @@ class Employees {
 } //end
 
 Employees.prototype.introduce = function () {
-   console.log(this.firstName + " " + this.lastName + " has worked for the company " + this.yearsWorked + " years.")
+   return this.firstName + " " + this.lastName + " has worked for the company " + this.yearsWorked + " years.";
 } //end
 
 let emp1 = new Employees("Carl", "Smith", "9");
@@ -34,14 +34,13 @@ let emp2 = new Employees("John", "Doe", "2");
 
 let labels = ["First Name", "Last Name", "Years Worked"];
 
-let employeeArray1 = [];
-employeeArray1.push(emp1.firstName, emp1.lastName, emp1.yearsWorked);
+let employeeArray = [];
+employeeArray.push(emp1, emp2);
 
-let employeeArray2 = [];
-employeeArray2.push(emp2.firstName, emp2.lastName, emp2.yearsWorked);
-
-let employeeArray = [labels, employeeArray1, employeeArray2];
 console.table(employeeArray);
 
-emp1.introduce();
-emp2.introduce();
+employeeArray.forEach((person) => {
+   console.log(person.introduce());
+});
+
+
